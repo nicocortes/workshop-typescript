@@ -1,0 +1,20 @@
+/// <reference types="@types/google.maps" />
+
+import { User } from './User';
+import { Company } from './Company';
+import { CustomMap } from './CustomMap';
+
+const map = new CustomMap('map');
+const user = new User();
+const company = new Company();
+
+map.addMarker(user);
+map.addMarker(company);
+
+if (map) {
+  const first = document.getElementById('map');
+  if (first) {
+    first.style.width = '100%';
+    first.style.height = '600px';
+  }
+}
